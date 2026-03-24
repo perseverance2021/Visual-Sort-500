@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Rod Sort Visualizer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Rod Sort Visualizer</h1>
+    <p class="description">
+      Click Start to automatically sort rods from shortest (left) to tallest (right).
+    </p>
+
+    <section class="controls" aria-label="sort controls">
+      <label for="rodCount">Rods:</label>
+      <input id="rodCount" type="number" min="5" max="500" value="20" />
+      <label for="sortMethod">Method:</label>
+      <select id="sortMethod">
+        <option value="bubble">Bubble Sort</option>
+        <option value="selection">Selection Sort</option>
+        <option value="insertion">Insertion Sort</option>
+        <option value="quick">Quick Sort</option>
+        <option value="merge">Merge Sort</option>
+        <option value="heap">Heap Sort</option>
+        <option value="shell">Shell Sort</option>
+        <option value="comb">Comb Sort</option>
+        <option value="cocktail">Cocktail Sort</option>
+      </select>
+      <label for="speed">Speed:</label>
+      <input id="speed" type="range" min="1" max="100" value="55" />
+      <span id="speedValue">55</span>
+      <button id="startBtn" type="button">Start</button>
+      <button id="resetBtn" type="button">New Random Set</button>
+      <span id="status" aria-live="polite">Ready</span>
+    </section>
+
+    <section id="board" class="board" aria-label="sorting rods"></section>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
